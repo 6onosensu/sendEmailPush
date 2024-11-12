@@ -1,0 +1,6 @@
+on: [push]
+jobs: 
+  mailOnPush: ubintu-latest
+  repos:
+    -name: Send email to this address
+    users: 
