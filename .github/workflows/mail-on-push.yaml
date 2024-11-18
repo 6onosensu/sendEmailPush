@@ -4,7 +4,7 @@ jobs:
   mail_on_push: 
     runs-on: ubuntu-latest
     steps:
-      - name: Send email to this address
+      - name: Send email notification
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -15,5 +15,5 @@ jobs:
           body: |
             Hello,
             A single commit created by $ {{github.event.pusher.name}}
-          to: darja.portnova@gmail.com
+          to: juri.vaitmaa@tthk.ee
           from: ${{ secrets.MAIL_USERNAME }}
