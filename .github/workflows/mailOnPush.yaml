@@ -1,7 +1,7 @@
 on: [push]
 jobs: 
   mailOnPush: 
-    runs-on: ubintu-latest
+    runs-on: ubuntu-latest
   repos:
     -name: Send email to this address
     users: darja.portnova/action-send-mail@v3
