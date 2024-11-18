@@ -5,15 +5,15 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - name: Send email to this address
-    uses: dawidd6/action-send-mail@v3
-    with:
-      server_address: smtp.gmail.com
-      server_port: 587
-      username: ${{secrets.MAIL_USERNAME}}
-      password: ${{secrets.MAIL_PASSWORD}}
-      subject: Commit Notification
-      body: |
-        Hello,
-        A single commit created by $ {{github.event.pusher.name}}
-      to: darja.portnova@gmail.com
-      from: ${{ secrets.MAIL_USERNAME }}
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
+        subject: Commit Notification
+        body: |
+          Hello,
+          A single commit created by $ {{github.event.pusher.name}}
+        to: darja.portnova@gmail.com
+        from: ${{ secrets.MAIL_USERNAME }}
