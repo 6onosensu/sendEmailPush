@@ -1,6 +1,7 @@
-on: [push]
+on: 
+  push:
 jobs: 
-  mailOnPush: 
+  mail_on_push: 
     runs-on: ubuntu-latest
   repos:
     -name: Send email to this address
