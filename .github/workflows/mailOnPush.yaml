@@ -11,7 +11,7 @@ jobs:
       password: ${{secrets.MAIL_PASSWORD}}
       subject:
       body: |
-        Hello,
+        Hello team,
         A single commit created by $ {{github.event.pusher.name}}
       from: Github actions for
       to: darja.portnova@gmail.com
