@@ -15,5 +15,5 @@ jobs:
           body: |
             Hello,
             A single commit created by $ {{github.event.pusher.name}}
-          to: juri.vaitmaa@tthk.ee
+          to: darja.portnova@gmail.com
           from: ${{ secrets.MAIL_USERNAME }}
