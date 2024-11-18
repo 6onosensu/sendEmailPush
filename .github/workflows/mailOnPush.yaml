@@ -1,9 +1,10 @@
 on: [push]
 jobs: 
-  mailOnPush: ubintu-latest
+  mailOnPush: 
+    runs-on: ubintu-latest
   repos:
     -name: Send email to this address
-    users: 6onosensu/action-send-mail@v3
+    users: darja.portnova/action-send-mail@v3
     with:
       server_address: smtp.gmail.com
       server_port: 587
