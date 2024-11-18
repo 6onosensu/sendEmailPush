@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
   repos:
     -name: Send email to this address
-    users: darja.portnova/action-send-mail@v3
+    uses: darja.portnova/action-send-mail@v3
     with:
       server_address: smtp.gmail.com
       server_port: 587
@@ -14,5 +14,5 @@ jobs:
       body: |
         Hello team,
         A single commit created by $ {{github.event.pusher.name}}
-      from: Github actions for
+      from: Github actions for ${{ secrets.MAIL_USERNAME }}
       to: darja.portnova@gmail.com
